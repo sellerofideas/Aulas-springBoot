@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="/logar" method="post">
+        <div>
+            <input type="email" id="email" name="email"    placeholder="email">
+        </div>
+
+        <div>
+            <input type="password" name="senha"    placeholder="senha">
+        </div>
+
+        <div>
+            <input type="checkbox" id="lembrar" name="lembrar">
+            <label for="lembrar">Lembrar de mim</label>
+        </div>
+
+        <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert"></div>
+
+        <button class="btn btn-primary btn-user btn-block">Logar</button>
+    </form>
+</body>
+
+</html>
